@@ -1,8 +1,6 @@
-# React + Vite
+# CRUD de gestión de accesos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto consta de una aplicacion web desarrollada con React y Vite junto con los estilos de Tailwind donde el objetivo general es poder
+tener un lugar donde gestionar los accesos de los diferentes usuarios(trabajadores) de un establecimiento o empresa donde
+necesitan una tarjeta rfid para ingresar (el prototipo de lector rfid tambien es creado por mi). Por lo que se necesita un
+sistema personalizado para su supervición. Descripcion mas detalla mas adelante...
