@@ -4,10 +4,7 @@
             "path": "."
         },
         {
-            "path": "../../../Proyectos/react-native/backend-app-gestion"
-        },
-        {
-            "path": "../../../Proyectos/WEB/HolaMundoJS"
+            "path": "../backend-control-access"
         }
     ],
 	"settings": {}
