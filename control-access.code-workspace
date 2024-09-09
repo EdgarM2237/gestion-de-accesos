@@ -1,0 +1,14 @@
+{
+	"folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../../../Proyectos/react-native/backend-app-gestion"
+        },
+        {
+            "path": "../../../Proyectos/WEB/HolaMundoJS"
+        }
+    ],
+	"settings": {}
+}
