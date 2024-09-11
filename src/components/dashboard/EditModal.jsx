@@ -42,15 +42,15 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            id: currentItem.id,
-            username: formData.username,
-            email: formData.email,
+            id: currentItem.user_id,
+            username: formData.user_name,
+            email: formData.user_email,
             card_uid: formData.card_uid,
-            gender: formData.gender,
-            permisos: formData.permisos,
+            gender: formData.genere,
+            permisos: formData.devices,
             rol: formData.rol,
             zona: formData.zona,
-            numeroSerial: formData.numeroSerial,
+            numeroSerial: formData.user_serial,
           }),
           credentials: "include",
         }
@@ -72,7 +72,7 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Editar {formData.username || "Item"}</DialogTitle>
+          <DialogTitle>Editar {formData.user_name || "Item"}</DialogTitle>
           <DialogDescription>
             Realiza los cambios necesarios y guarda.
           </DialogDescription>
@@ -82,7 +82,7 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
             <Label htmlFor="username">Nombre</Label>
             <Input
               id="username"
-              value={formData.username || ""}
+              value={formData.user_name || ""}
               onChange={handleChange}
             />
           </div>
@@ -90,7 +90,7 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
             <Label htmlFor="email">Correo</Label>
             <Input
               id="email"
-              value={formData.email || ""}
+              value={formData.user_email || ""}
               onChange={handleChange}
             />
           </div>
@@ -107,7 +107,7 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
               <div>
                 <Label htmlFor="gender">Género</Label>
                 <Select
-                  value={formData.gender || ""}
+                  value={formData.genere || ""}
                   onValueChange={(value) =>
                     setFormData((prevData) => ({ ...prevData, gender: value }))
                   }
@@ -126,7 +126,7 @@ const EditModal = ({ open, onClose, currentItem, currentSection, onSave }) => {
                 <Label htmlFor="permisos">Permisos</Label>
                 <Input
                   id="permisos"
-                  value={formData.permisos || ""}
+                  value={formData.devices || ""}
                   onChange={handleChange}
                 />
               </div>

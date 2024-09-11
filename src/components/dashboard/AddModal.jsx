@@ -18,7 +18,7 @@ import {
 } from "../ui/select";
 
 const AddModal = ({ isOpen, setIsOpen, section, onSave }) => {
-  const [formData, setFormData] = useState({
+  const dataRequere = {
     username: "",
     email: "",
     card_uid: "",
@@ -27,7 +27,8 @@ const AddModal = ({ isOpen, setIsOpen, section, onSave }) => {
     rol: "",
     zona: "",
     numeroSerial: "",
-  });
+  };
+  const [formData, setFormData] = useState(dataRequere);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -81,6 +82,7 @@ const AddModal = ({ isOpen, setIsOpen, section, onSave }) => {
       console.log(data);
       setIsOpen(false);
       onSave(formData.username);
+      setFormData(dataRequere);
     } catch (error) {
       console.error("Error:", error);
     }

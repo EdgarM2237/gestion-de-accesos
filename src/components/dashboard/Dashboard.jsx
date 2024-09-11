@@ -93,11 +93,6 @@ export default function Dashboard() {
 
   };
 
-  const handleAdd = (section) => {
-    setCurrentSection(section);
-    setAddModalOpen(true);
-  };
-
   const handleSave = async (updatedItem) => {
     console.log("Item agregado:", updatedItem);
     await fetchUsers();
@@ -151,15 +146,7 @@ export default function Dashboard() {
                 Administra los usuarios y sus permisos de acceso
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="flex justify-between items-center mb-4">
-                <Input placeholder="Buscar usuarios..." className="max-w-sm" />
-                <Button onClick={() => handleAdd("usuarios")}>
-                  <UserPlusIcon className="mr-2 h-4 w-4" /> Agregar Usuario
-                </Button>
-              </div>
-              <UserList />
-            </CardContent>
+            <UserList/>
           </Card>
         </TabsContent>
 
